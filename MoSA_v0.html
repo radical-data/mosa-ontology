@@ -25,7 +25,7 @@ tr:nth-child(odd) {
   <body>
 <h1>Museum of Stolen Artifacts Ontology v0</h1>
 <hr>      
-    <p><i>For questions or criticisms, please contact Valentin [add email address], who maintains this document.</i></p>
+    <p><i>For questions or criticisms, please contact Valentin (at &lt;valevogelmann <i>at</i>&gt; gmail <i>dot</i> com), who maintains this document.</i></p>
     <p>This is the first, basic version of the <i>Museum of Stolen Artifacts Ontology</i> (<i>MoSA</i> for short) and not even a draft, thus subject to constant changes. This is the document which can be referred to when structuring data using the MoSA ontology &mdash; all of the entities and predicates the MoSA ontology defines are listed below including their domains, ranges and relationships.
     </p>
 <hr>      
@@ -81,10 +81,10 @@ tr:nth-child(odd) {
         <td>
             <ul>
                 
-                <li>Superclasses:</li>
-                <li>Subclasses:</li>
-                <li>Definition:</li>
-                <li>Usage notes:</li>
+                <li>Superclasses: [UNDER CONSTRUCTION: it might be useful to create a fuller ontology (i.e. hierarchy) of institutional and non-institutional entities that are actors in the context of stolen artefacts. the superclass of a <b>(Western)</b> <i>Museum</i> could then be something like "(Western) Institution"?</li>
+                <li>Subclasses: [UNDER CONSTRUCTION: It could become useful to distinguish different kinds of <i>(Western)</i> museums?]</li>
+                <li>Definition: [UNDER CONSTRUCTION: A (public) institution which holds an object in the MoSA, i.e. a stolen artefact, and is the provider of the information in a <a href="#DigitalRecord">DigitalRecord</a>.] </li>
+                <li>Usage notes: [UNDER CONSTRUCTION: This entity class has been created on the fly out of the need to "name" entities like the British Museum, Wereldmuseum and Musei Vaticani. The name of this class as well as its meaning are very much open for debate.]</li>
             </ul>
         </td>
       </tr>
@@ -101,14 +101,15 @@ tr:nth-child(odd) {
         <td>
             <ul>
                 
-                <li>Superclasses:</li>
+                <li>Superclasses: [UNDER CONSTRUCTION: There could be more generic entities which connect to other events in an artefact's history.]</li>
                 <li>Subclasses:
                     <ul>
                         <li><a href=#ProvAcquisition>ProvAcquisition</a></li>
+                        <li>[UNDER CONSTRUCTION]: Add other specific provenance types.</li>
                     </ul>
                 </li>
-                <li>Definition:</li>
-                <li>Usage notes:</li>
+                <li>Definition: A generic <i>provenance</i> entry, i.e. any event or part of an artefact's history during or after its theft, and relating to how the artefact ended up in its current location.</li>
+                <li>Usage notes: This class and all of its subclasses carry the name <i>provenance</i>, a term in used in Western historical and museological context to describe how (and why) an object got to its present location. It is supposed to be a neutral term for research purposes but masks or hides violences and injustices. We adopt the term here to describe what other institutions describe but don't identify with it.</li>
             </ul>
         </td>
       </tr>
@@ -124,8 +125,8 @@ tr:nth-child(odd) {
                     </ul>
                 </li>
                 <li>Subclasses:</li>
-                <li>Definition:</li>
-                <li>Usage notes:</li>
+                <li>Definition: </li>
+                <li>Usage notes: Much like its super class term <i>provenance</i>, the term <i>acquisition</i> is supposed to neutrally and generically describe how e.g. a state or museum came into possession of an object and masks that often these events were thefts, looting and other injust, violent actions. Like in the of the super class, we record the term because they use it./li>
             </ul>
         </td>
       </tr>
