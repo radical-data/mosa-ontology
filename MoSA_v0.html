@@ -33,7 +33,7 @@ tr:nth-child(odd) {
     <p>Since we are taking an iterative and bottom-up approach, this ontology is not defined with as a hierarchy of entities with a top-level element. It means that we only define the entities we "need" for making data more useful and clarifying intentions. For instance, it also means that (for now) we don't make commitments about <i>what</i> the objects in the Museum of Stolen Artifacts are.</p>
       
       <h3>Layer Entities</h3>
-      <p>We do want to distinguish the different "layers of existence" of that might (or might not) apply to an object, for now these are (1) of course its physical manifestation (or multiple) and (2) digital records that witness their existence and describe them. The latter are, however, typically taken from institutions in those countries that have stolen them, and this is a core reason for making this distinction explicit: Separating objects from what different parties say about them, can allow us to question and contest.</p>
+      <p>We do want to distinguish the different "layers of existence" of that might (or might not) apply to an object, for now these are (1) of course its physical manifestation(s) and (2) digital records that witness their existence and describe them. The latter are, however, typically taken from institutions in those countries that have stolen them, and this is a core reason for making this distinction explicit: Separating objects from what different parties say about them, can allow us to question and contest.</p>
 
     <table>
       <tr>
@@ -42,7 +42,7 @@ tr:nth-child(odd) {
       <tr>
         <td>
             <ul>
-                <li>Definition:</li>
+                <li>Definition: </li>
                 <li>Usage notes:</li>
             </ul>
         </td>
@@ -54,15 +54,15 @@ tr:nth-child(odd) {
       <tr>
         <td>
             <ul>
-                <li>Definition:</li>
-                <li>Usage notes:</li>
+                <li>Definition: A record in a digital collection, dataset, etc which witnesses or claims the existence of an object (physical or not) and describes typically aspects of it. </li>
+                <li>Usage notes: This entity type mainly serves the purpose of bringing together information from various institutional collection systems but can explicitly also be used to create new records. Note, however, that of course an entry in the MoSA itself is also a <i>DigitalRecord</i> but we reserve this entity for representing <i>external</i> digital records.</li>
                 <li>Required properties:
                     <ul>
                         <li>
-                            <a href=#identified_by>identified_by</a>
+                            <a href=#identified_by>identified_by</a>: Making it possible to refer back to the record in its original context; requiring an identifier <i>should</i> be possible because of the digital nature of this entity.
                         </li>
                         <li>
-                            <a href=#assigned_title>assigned_title</a>
+                            <a href=#assigned_title>assigned_title</a>: For human identification of records, it is covenient to have a title; could be forged in case not present in an original record. 
                         </li>
                         
                     </ul>
@@ -234,7 +234,7 @@ tr:nth-child(odd) {
         <td>
             <ul>        
                 <li>Domain:<a href=#DigitalRecord>DigitalRecord</a></li>
-                <li>Range: a unique, persistent identifier (i.e. URI)</li>
+                <li>Range: a unique, persistent identifier (e.g. a URI)</li>
 
                 <li>Definition: </li>
                 <li>Usage notes:</li>
