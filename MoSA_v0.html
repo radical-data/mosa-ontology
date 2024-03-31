@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Museum of Stolen Artifacts v0</title>
+      <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+</style>
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+  </head>
+  <body>
+<h1>Museum of Stolen Artifacts Ontology v0</h1>
+<hr>      
+    <p><i>For questions or criticisms, please contact Valentin [add email address], who maintains this document.</i></p>
+    <p>This is the first, basic version of the <i>Museum of Stolen Artifacts Ontology</i> (<i>MoSA</i> for short) and not even a draft, thus subject to constant changes. This is the document which can be referred to when structuring data using the MoSA ontology &mdash; all of the entities and predicates the MoSA ontology defines are listed below including their domains, ranges and relationships.
+    </p>
+<hr>      
+<h2>Entities</h2>
+    <p>Since we are taking an iterative and bottom-up approach, this ontology is not defined with as a hierarchy of entities with a top-level element. It means that we only define the entities we "need" for making data more useful and clarifying intentions. For instance, it also means that (for now) we don't make commitments about <i>what</i> the objects in the Museum of Stolen Artifacts are.</p>
+      
+      <h3>Layer Entities</h3>
+      <p>We do want to distinguish the different "layers of existence" of that might (or might not) apply to an object, for now these are (1) of course its physical manifestation (or multiple) and (2) digital records that witness their existence and describe them. The latter are, however, typically taken from institutions in those countries that have stolen them, and this is a core reason for making this distinction explicit: Separating objects from what different parties say about them, can allow us to question and contest.</p>
+
+    <table>
+      <tr>
+        <th id="PhysicalManifestation">PhysicalManifestation</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th id="DigitalRecord">DigitalRecord</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+                <li>Required properties:
+                    <ul>
+                        <li>
+                            <a href=#identified_by>identified_by</a>
+                        </li>
+                        <li>
+                            <a href=#assigned_title>assigned_title</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </td>
+      </tr>
+    </table>
+
+<h3>Object-Context Entities</h3>
+  <table>
+      <tr>
+        <th id="Museum">Museum</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                
+                <li>Superclasses:</li>
+                <li>Subclasses:</li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+  </table>
+
+
+      
+ <h3>Provenance Entities</h3>
+  <table>
+      <tr>
+        <th id="ProvGeneric">ProvGeneric</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                
+                <li>Superclasses:</li>
+                <li>Subclasses:
+                    <ul>
+                        <li><a href=#ProvAcquisition>ProvAcquisition</a></li>
+                    </ul>
+                </li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+      <tr>
+        <th id="ProvAcquisition">ProvAcquisition</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>                
+                <li>Superclasses:
+                    <ul>
+                        <li><a href=#ProvGeneric>ProvGeneric</a></li>
+                    </ul>
+                </li>
+                <li>Subclasses:</li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+    </table>
+
+ <h3>Datatype Entities</h3>
+  <table>
+      <tr>
+        <th id="DateDescription">DateDescription</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+                <li>Required properties:
+                    <ul>
+                        <li>
+                            <a href=#assigned_text>assigned_text</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </td>
+      </tr>
+      <tr>
+        <th id="LocationDescription">LocationDescription</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Definition:</li>
+                <li>Usage notes:</li>                
+                <li>Required properties:
+                    <ul>
+                        <li>
+                            <a href=#assigned_text>assigned_text</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </td>
+      </tr>
+    </table>    
+
+<hr>
+
+<h2>Predicates</h2>
+<h3>Top-level Predicates</h3>
+
+<p>Predicates of this kind are intended to be applied directly to members of the MoSA at the top level, this is however not a strict restriction.</p>
+
+<table>
+      <tr>
+        <th id="name">name</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+      <tr>
+        <th id="digitally_represented_by">digitally_represented_by</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Domain:</li>
+                <li>Range: <a href=#DigitalRecord>DigitalRecord</a></li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+        <tr>
+        <th id="physical_object">physical_object</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>                
+                <li>Domain:</li>
+                <li>Range:</li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+    </table>    
+
+
+<h3>Predicates pertaining to DigitalRecord</h3>
+
+<p>These predicates may also be used in other contexts, re-use is in fact encouraged (e.g. <a href=#assigned_text>assigned_text</a> can be used for attaching any text to any entity). The reason for calling most predicates "assigned_" is to highlight the contestable nature of attributions.</p>
+
+<table>
+      <tr>
+        <th id="identified_by">identified_by</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>        
+                <li>Domain:<a href=#DigitalRecord>DigitalRecord</a></li>
+                <li>Range: a unique, persistent identifier (i.e. URI)</li>
+
+                <li>Definition: </li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+      <tr>
+        <th id="assigned_title">assigned_title</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>
+                <li>Domain:</li>
+                <li>Range: </li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+      <tr>
+        <th id="assigned_text">assigned_text</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>                
+                <li>Domain:</li>
+                <li>Range:</li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+          <tr>
+        <th id="assigned_culture">assigned_culture</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>                
+                <li>Domain: any</li>
+                <li>Range: string (for now) in various languages</li>
+                <li>Definition:</li>
+                <li>Usage notes: Museum institutions typically assign cultures to objects (sometimes also known as "ethnic group" or "population"), this predicate can be used to record that. For now, we treat the assigned culture as a simple strig, eventually it should be a link (e.g. into a thesaurus).</li>
+            </ul>
+        </td>
+      </tr>
+
+          <tr>
+        <th id="assigned_prov">assigned_prov</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>                
+                <li>Domain:</li>
+                <li>Range:</li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+
+              <tr>
+        <th id="assigned_date">assigned_date</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>                
+                <li>Domain:</li>
+                <li>Range:</li>
+                <li>Definition:</li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+    </table>
+
+<h3>Predicates pertaining to PhysicalManifestation</h3>
+<p></p>
+
+<table>
+      <tr>
+        <th id="currently_at">currently_at</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>        
+                <li>Domain:</li>
+                <li>Range: 
+                    <ul>
+                        <li><a href=#Museum>Museum</a></li>
+                        <li><a href=#LocationDescription>LocationDescription</a></li>
+                    </ul>
+                </li>
+
+                <li>Definition: </li>
+                <li>Usage notes: This property refers not (necessarily) to a precise geographical location (see <a href=#precise_location>precise_location</a> for that) but rather to a concept or (geo-polotical) entity with a geographical manifestitation, such as a country or a museum. This property may contain a <a href=#precise_location>precise_location</a> to further specify <i>where exacctly</i> in the entity the object is, e.g. a room.</li>
+            </ul>
+        </td>
+      </tr>
+          <tr>
+        <th id="should_be_at">should_be_at</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>        
+                <li>Domain:</li>
+                <li>Range:</li>
+
+                <li>Definition: </li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+     <tr> 
+        <th id="assigned_mnemonic">assigned_mnemonic</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>        
+                <li>Domain:</li>
+                <li>Range: string</li>
+
+                <li>Definition: Mnemonic (or inventory number, object number, etc) given to the physical object where it either currently is (<a href=#currently_at>currently_at</a>) or, if applicable, should be (<a href=#should_be_at>should_be_at</a>) and given to the object as a unique identifier.</li>
+                <li>Usage notes: Museums and other object-holding instituion use all sorts of standards for coining mnemonics, which is why the range of this property is basic strings. These mnemonics are (especially outside of digital context) a key way by which objects are identified in the places they are held, so this property should also be given for physical objects.</li>
+            </ul>
+        </td>
+      </tr>
+    <tr>
+        <th id="precise_location">precise_location</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>        
+                <li>Domain:</li>
+                <li>Range: 
+                    <ul>
+                     <li>   <a href=#LocationDescription>LocationDescription</a>
+                    </li>
+                    <li><a href="https://www.geonames.org/">geonames URI</a></li>
+                    </ul>
+                </li>
+                <li>Definition: </li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+          <tr>
+        <th id="depicted_by">depicted_by</th>
+      </tr>
+      <tr>
+        <td>
+            <ul>        
+                <li>Domain:</li>
+                <li>Range:</li>
+
+                <li>Definition: </li>
+                <li>Usage notes:</li>
+            </ul>
+        </td>
+      </tr>
+</table>
+      
+  </body>
+</html>
+
+
+<!-- ## entities
+
+ - DigitalRecord
+ - PhysicalManifestation
+
+
+ - ProvGeneric
+ - ProvAcquisition
+ - 
+
+ - DateDescription
+ - LocationDescription
+
+## predicates
+
+                <li>Domain:</li>
+                <li>Range:</li>
+
+
+- name
+- digitally_represented_by
+    - identified_by
+    - assigned_title
+    - assigned_text
+    - assigned_culture
+    - assigned_prov
+    - assigned_date
+- physical_objects
+    - currently_at
+    - should_be_at
+    - assigned_mnemonic
+    - precise_location
+    - depicted_by
+-->
+ 

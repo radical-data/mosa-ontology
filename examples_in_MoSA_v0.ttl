@@ -1,0 +1,207 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix schema: <https://schema.org/> .
+
+@prefix mosa: <https://radicaldata.org/mosa#> .
+@base <https://radicaldata.org/mosa> .
+
+
+@prefix nmvw: <https://hdl.handle.net/20.500.11840/> .
+@prefix tbm: <https://www.britishmuseum.org/collection/object/E_Oc1869-1005-1> .
+@prefix mv: <https://catalogo.museivaticani.va/index.php/Detail/objects/> .
+
+
+
+
+<mosa:ID1>
+    mosa:name "[NATIVE NAME]" ;
+	mosa:digitally_represented_by [
+		a mosa:DigitalRecord ;
+		mosa:identified_by <nmvw:84267> ;
+        mosa:assigned_title "Houten dansstaf, versierd met uitgesneden hoofd"@nl ;
+        mosa:assigned_text '''Deze staf met een menselijk gezicht aan de bovenzijde werd door hoofdmannen gedragen als teken van hun (sacrale) macht. Doordat bomen op Paaseiland steeds zeldzamer werden was hout een kostbare en zeldzame grondstof in de periode met de eerste contacten met Europeanen. Grote houten voorwerpen waren dus een luxe die eigenlijk alleen aan hoofdmannen voorbehouden waren. Historische bronnen melden dat de staf een eigen naam droeg en het menselijke gezicht het portret van de eigenaar van de "ua" was.
+Deze staf vertoont uitzonderlijk liptatoeage. Op stenen beelden wordt dat soms weergegeven, maar eigenlijk nooit op houten beelden.'''@nl ;
+        mosa:assigned_date [ a mosa:DateDescription ; mosa:assigned_text "voor 1957"@nl ] ;
+        mosa:assigned_prov [ a mosa:ProvAcquisition ; mosa:asigned_text "Ruil, 1957-01-01"@nl ] ;
+
+        # by using CIDOC-CRM's P43_has_dimension, we are committing to objects being "cidoc:E70_Thing"s (because that's the deomain of the predicate)
+        # dimension could also be made part of the mosa:physical_object property (depending on how "debatable" this info is considered)
+        cidoc:P43_has_dimension [
+            a cidoc:E54_Dimension ;
+            # could additionally have cidoc:P2_has_type mosa:Height (for example)
+            schema:unitText "cm" ;
+            schema:value 165 ],
+        [ 
+            a cidoc:E54_Dimension ;
+            # could additionally have cidoc:P2_has_type mosa:Width (for example)
+            schema:unitText "cm" ;
+            schema:value 9 ],
+        [ 
+            a cidoc:E54_Dimension ;
+            # could additionally have cidoc:P2_has_type mosa:Width (for example)
+            schema:unitText "cm" ;
+            schema:value 6 ] ;
+        mosa:assigned_culture "Oost-Polynesische culturen"@nl ;
+    ] ;
+	mosa:physical_object [
+        a mosa:PhysicalManifestation ;
+		mosa:currently_at [ 
+				a mosa:Museum ;
+				mosa:identified_by <nmvw> ; 
+				mosa:assigned_mnemonic "TM-2593-7" ; # reasoning: inventory numbers are given to physical objects themselves, not the digital records (as physical tags)
+				mosa:precise_location [ 
+					a mosa:LocationDescription ;
+					mosa:assigned_text '''SCV ➔ Edificio Paolino ➔ Museo Missionario Etnologico ➔ Area Oceania – Australia (OCE – AUS) ➔ vetrina OCE 3'''@it 
+ 				]
+		] ;
+        mosa:should_be_at [] ;
+        mosa:depicted_by [
+			#this is where image URIs would go
+        ]
+	].
+            
+
+
+<mosa:ID2> 
+    mosa:name "[NATIVE NAME]" ;
+	mosa:digitally_represented_by [
+		a mosa:DigitalRecord ;
+		mosa:identified_by <tbm:E_Oc1869-1005-1> ;
+        mosa:assigned_type "figure"@en ;
+        mosa:assigned_title '''Hoa Hakananaiʻa ('lost, hidden or stolen friend'), Moai (ancestor figure)'''@en ;
+        mosa:assigned_text '''Ancestor figure 'moai', called Hoa Hakananaiʻa (lost, hidden or stolen friend) made of basalt. The back of the figure features intricate petroglyphs associated with the bird man religion (tangata manu): birds, vulvas, dance paddles in the form of stylised human figures, a ring and a girdle design.'''@en ;
+        mosa:assigned_date "1000%/1200%"^^<http://id.loc.gov/datatypes/edtf/EDTF> ; # "1000/1200%" is EDTF for "between approximately the year 1000 and approximately the year 1200
+        mosa:assigned_prov [ 
+            a mosa:ProvAcquisition ; 
+            mosa:asigned_text '''Removed from original location during the HMS Topaze expedition to Rapa Nui (captained by Powell) in 1868 and presented to Queen Victoria by the Lords of the Admiralty. She then gifted it to the British Museum in 1869.'''@en ;
+            mosa:assigned_date "1869"^^<http://id.loc.gov/datatypes/edtf/EDTF>                       
+        ] ;
+        mosa:assigned_culture "Rapanui"@en ;
+
+        # by using CIDOC-CRM's P43_has_dimension, we are committing to objects being "cidoc:E70_Thing"s (because that's the deomain of the predicate)
+        # dimension could also be made part of the mosa:physical_object property (depending on how "debatable" this info is considered)
+        cidoc:P43_has_dimension [ 
+            a cidoc:E54_Dimension ;
+            cidoc:P2_has_type mosa:Diameter ;
+            schema:unitText "cm" ;
+            schema:value 47 
+        ],
+        [ 
+            a cidoc:E54_Dimension ;
+            cidoc:P2_has_type mosa:Width ;
+            schema:unitText "cm" ;
+            schema:value 96 
+        ],
+        [ 
+            a cidoc:E54_Dimension ;
+            cidoc:P2_has_type mosa:Height ;
+            schema:unitText "cm" ;
+            schema:value 242 ]
+    ] ;
+
+
+
+	mosa:physical_object [
+        a mosa:PhysicalManifestation ;
+		mosa:currently_at [ 
+				a mosa:Museum ;
+				mosa:identified_by <tbm> ; 
+				mosa:assigned_mnemonic "Oc1869,1005.1" ; # reasoning: inventory numbers are given to physical objects themselves, not the digital records (as physical tags)
+				mosa:precise_location [
+                    a mosa:LocationDescription ;
+                    mosa:assigned_text "On display (G24/od)"@en ;
+                ]
+		] ;
+        mosa:should_be_at [] ;
+        mosa:depicted_by [
+			#this is where image URIs would go
+        ]
+	].
+
+
+
+
+<mosa:ID3> 
+    mosa:name "[NATIVE NAME]" ;
+	mosa:digitally_represented_by [
+		a mosa:DigitalRecord ;
+		mosa:identified_by <mv:MV.100201.0.0> ;
+        mosa:assigned_title "Figura umana Moai tangata"@it ;
+        mosa:assigned_text '''Questa statua in legno è un moai tangata. Il corpo ben proporzionato mostra un ventre prominente, articolazioni definite alle caviglie, ai polsi e gomiti, e clavicole prominenti. La testa presenta spesse sopracciglia, pizzetto e lobi allungati tipici delle immagini moai kavakava. Le orecchie sono elaboratamente scolpite con motivi circolari ad indicare ornamenti a lisca di pesce arrotondati mentre gli occhi sono intarsiati con osso e ossidiana. Il capo è decorato con motivi simili ai petroglifi ritrovati in numerosi siti dell'isola. Il loro significato è incerto, ma si pensa rappresentino gli antenati familiari o i capi più importanti. '''@it ;
+        mosa:assigned_date [a mosa:DateDescription ; mosa:assigned_text "XIX sec."@it ] ;
+
+        mosa:assigned_prov [ 
+            a mosa:ProvAcquisition ; 
+            mosa:asigned_text '''Dono dei missionari della Congregazione dei Sacri Cuori o di Picpus (SS.CC.) (Braine-le-Comte, Belgio), in occasione dell'Esposizione Missionaria Vaticana'''@it ;
+            mosa:assigned_date "1925-01-14?"^^<http://id.loc.gov/datatypes/edtf/EDTF>                       
+        ] ,
+        [
+            a mosa:ProvGeneric ;
+            mosa:assigned_text '''Raccolto dai missionari della Congregazione dei Sacri Cuori o di Picpus (SS.CC.) sull’isola di Rapa Nui (isola di Pasqua) negli anni 1870-1880'''@it ;
+            mosa:assigned_date "1870/1880"^^<http://id.loc.gov/datatypes/edtf/EDTF> 
+        ] ;
+        mosa:assigned_culture "Rapa Nui"@it ;
+
+
+
+        cidoc:P43_has_dimension [ 
+            a cidoc:E54_Dimension ;
+            schema:unitText "cm" ;
+            schema:value 32 
+        ],
+        [ 
+            a cidoc:E54_Dimension ;
+            schema:unitText "cm" ;
+            schema:value 8.5 
+        ],
+        [ 
+            a cidoc:E54_Dimension ;
+            schema:unitText "cm" ;
+            schema:value 5 ]
+    ] ;
+
+
+
+	mosa:physical_object [
+        a mosa:PhysicalManifestation ;
+		mosa:currently_at [ 
+				a mosa:Museum ;
+				mosa:identified_by <mv> ; 
+				mosa:assigned_mnemonic "MV.100201.0.0" ; # reasoning: inventory numbers are given to physical objects themselves, not the digital records (as physical tags)
+				mosa:precise_location [
+                    a mosa:LocationDescription ;
+                    mosa:assigned_text '''SCV ➔ Edificio Paolino ➔ Museo Missionario Etnologico ➔ Area Oceania – Australia (OCE – AUS) ➔ vetrina OCE 3'''@it
+                ]
+		] ;
+        mosa:should_be_at [] ;
+        mosa:depicted_by ( 
+                <https://catalogo.museivaticani.va/media/mvca/images/4/2/3/8/35087_ca_object_representations_media_423812_large.jpg> 
+                <https://catalogo.museivaticani.va/media/mvca/images/4/2/3/8/51801_ca_object_representations_media_423815_large.jpg>
+                <https://catalogo.museivaticani.va/media/mvca/images/6/5/9/49630_ca_object_representations_media_65937_large.jpg> 
+                        )
+	].
+
+
+
+
+
+
+
+# # layers
+
+#  - the object as "an idea" (recording the existence -- material or immaterial alike -- of the object)
+#     - has a name 
+#     - other attributes?
+# AND 
+#     - (potentially) a physical manifestation 
+#     	-> native info
+#     	-> info about current location
+#     	-> info regarding (legal/material/...) status
+
+#     - a digital record at/by institution that currently holds it
+#     	-> used for identification
+#     	-> could be multiple 
+#     	-> could eventually also be an entry as MoSA itself / or by Rapa Nui
+#         - that digital record has a context
+#             -> 
