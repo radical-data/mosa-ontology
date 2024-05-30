@@ -19,8 +19,13 @@
    3. renarrative (someone told me that)
    4. dubitative (I heard that but I have reason to doubt/who I heard from also hasn't observed)
 
+ - recording the absence of an object (I know/believe/suspect that an object exists but have no record of it/don't know where it is held) 
 
 ## Ontology Elements
+
+ - physical object itself - basis for nearly everything else (because we're eventually interested in artefacts)
+ - digital records - the lens through which we interact with physical object
+ - museums, institutions - entities that hold and manage objects 
 
 
 
