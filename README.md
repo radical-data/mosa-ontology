@@ -2,13 +2,13 @@
 
 ## 1. Witnessing Artefacts
 
-## Guiding Questions
+#### Guiding Questions
 
  - who has encountered/seen/witnessed artefacts? when? how?
  - where is an artefact currently held? how is it (digitally accessed?)
  - 
 
-## Rationales & Core Aspects
+#### Rationales & Core Aspects
 
  - there are physical/real (although not necessarily material) objects (aka artefacts)
  - there are digital records; these may _witness_ artefacts or claim their existence (an artefact's existence and attributes are always described through a digital records)
@@ -21,14 +21,17 @@
 
  - recording the absence of an object (I know/believe/suspect that an object exists but have no record of it/don't know where it is held) 
 
-## Ontology Elements
+#### Ontology Elements
 
  - physical object itself - basis for nearly everything else (because we're eventually interested in artefacts)
+   - the cultural context it is from (denomination of the culture/group) & evidentiality of that
+   - objects relating to the physical object (through object categories, being potentially the same
  - digital records - the lens through which we interact with physical object
- - museums, institutions - entities that hold and manage objects 
-
-
-
+ - museums, institutions - entities that hold and, importantly, create and publish digital records about them
+   - idetifiers about institutions themselves
+   - policies, documents and other contextual materials about object status and restitution
+   - (persistent) identifiers assigned by institutions for digital records
+ 
 
 
 ## 2. Describing Artefacts
