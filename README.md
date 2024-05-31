@@ -25,7 +25,8 @@
 
  - physical object itself - basis for nearly everything else (because we're eventually interested in artefacts)
    - the cultural context it is from (denomination of the culture/group) & evidentiality of that
-   - objects relating to the physical object (through object categories, being potentially the same
+   - other objects that relate to the object (by being about the object, by describing it)
+   - relationships between physical objects (through object categories, being potentially the same, parts of each other)  
  - digital records - the lens through which we interact with physical object
  - museums, institutions - entities that hold and, importantly, create and publish digital records about them
    - idetifiers about institutions themselves
